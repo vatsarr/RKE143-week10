@@ -4,7 +4,6 @@ const db = require("../db");
 
 router.get("/", async (req, res) => {
     const recipes = await db.query("SELECT * FROM recipe;");
-    console.log(recipes.rows);
     res.json(recipes.rows);
 });
 
